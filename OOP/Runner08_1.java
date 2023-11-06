@@ -5,9 +5,7 @@ abstract class Polygon {
     this.numSides = numSides;
   }
 
-  public double getArea() {
-    return 2.0;
-  }
+  public abstract double getArea(); 
 }
 
 class Rectangle extends Polygon {
@@ -25,7 +23,6 @@ class Rectangle extends Polygon {
     
   }
 
-  public abstract double getArea();
 }
 
 public class Runner08 {
@@ -39,6 +36,7 @@ public class Runner08 {
     // But if function does not have body why did you wrote it at first place?
     // Because when child will inherit this it will define it's body.
     // BUt when you have abstract function you have to make class abstract as well so change the class defination accordingly as well.
+    // SO, either you will include something in the function body or you have to make your class abstract as well.
     Rectangle r = new Rectangle();
 
     r.setSides(4, 4);
